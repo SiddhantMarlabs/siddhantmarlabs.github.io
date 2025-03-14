@@ -40,6 +40,7 @@ const App = () => {
   useEffect(() => {
     const initializeBotConnection = async () => {
       try {
+        console.log("Token Endpoint:", tokenEndpoint);
         const response = await fetch(tokenEndpoint, { method: 'GET' }); // Fetch the token from the endpoint
         if (!response.ok) {
           throw new Error(`Failed to fetch token: ${response.statusText}`);
